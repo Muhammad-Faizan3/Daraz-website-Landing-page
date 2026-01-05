@@ -1,0 +1,39 @@
+import Header from './Components/Header';
+import Carousel from "./Components/Carousel";
+import Image from './Components/Image';
+import FlashSale from "./Components/FlashSale";
+import Categories from './Components/Categories';
+import JustForYou from "./Components/JustForYou";
+import Button from './Components/Button';
+import Footer from './Components/Footer';
+import FooterMain from './Components/FooterMain';
+import FooterBottom from "./Components/FooterBottom";
+import './App.css'
+function App() {
+
+  return (
+    <>
+      < Header />
+      <div className='bg-gray-50'>
+        <Carousel />
+        <Image />
+
+        <div className="max-w-7xl mx-auto">
+          <FlashSale />
+        </div>
+        <div className="max-w-7xl mx-auto">
+          <Categories />
+        </div>
+        <div className="max-w-7xl mx-auto ">
+          <JustForYou />
+          < Button />
+        </div>
+        <Footer />
+        <FooterMain />
+        < FooterBottom/>
+      </div>
+    </>
+  )
+}
+
+export default App
