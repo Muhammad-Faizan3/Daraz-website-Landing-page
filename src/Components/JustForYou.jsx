@@ -1,247 +1,136 @@
-const products = [
-  {
-    id: 1,
-    title: "Dell Pro Sleeve 13 (Original)",
-    price: "Rs. 2,600",
-    discount: "-53%",
-    reviews: 17,
-    image: "https://img.drz.lazcdn.com/static/pk/p/24b82c3876c311bdf687dcf68dee70ba.jpg_200x200q80.jpg_.avif",
-  },
-  {
-    id: 2,
-    title: "M10 and i12 TWS Wireless Bluetooth Earbuds",
-    price: "Rs. 548",
-    discount: "-73%",
-    reviews: 869,
-    image: "https://img.drz.lazcdn.com/g/kf/S2dd92dd1db7b46c1bd75950f6ccedd28z.jpg_200x200q80.jpg_.avif",
-  },
-  {
-    id: 3,
-    title: "AirPods Pro Wireless Earbuds",
-    price: "Rs. 547",
-    discount: "-64%",
-    reviews: 1938,
-    image: "	https://img.drz.lazcdn.com/static/pk/p/0644ef782f501978be71d18a1b9bc39b.jpg_200x200q80.jpg_.avif",
-  },
-  {
-    id: 4,
-    title: "Beanie Cap with Neck Warmer",
-    price: "Rs. 355",
-    discount: "-64%",
-    reviews: 657,
-    image: "https://img.drz.lazcdn.com/static/pk/p/2b595f665d51f490170e89cdc3729376.jpg_200x200q80.jpg_.avif",
-  },
-  {
-    id: 5,
-    title: "Cat Neck Rainbow Ribbon Collar",
-    price: "Rs. 239",
-    discount: "-68%",
-    reviews: 66,
-    image: "	https://img.drz.lazcdn.com/static/pk/p/51a53b6289e842c0b8be0b4b27c415de.jpg_200x200q80.jpg_.avif",
-  },
-  {
-    id: 6,
-    title: "INZ Premium Panel Style Zipper",
-    price: "Rs. 979",
-    discount: "-67%",
-    reviews: 686,
-    image: "	https://img.drz.lazcdn.com/static/pk/p/b1e47ba3cb4fd66d84dc7a01ffd3d5dd.jpg_200x200q80.jpg_.avif",
-  },
-    {
-    id: 1,
-    title: "GTA Vice City Game for Android Mobile",
-    price: "Rs. 2,600",
-    discount: "-53%",
-    reviews: 17,
-    image: "https://img.drz.lazcdn.com/static/pk/p/24e217d7f4247a04dd792c11a6fa755e.jpg_200x200q80.jpg_.avif",
-  },
-  {
-    id: 2,
-    title: "Moon Touch Lip & Cheek Tint - 20ml - Natural",
-    price: "Rs. 548",
-    discount: "-73%",
-    reviews: 869,
-    image: "	https://img.drz.lazcdn.com/static/pk/p/b00e39db932875896cba278e424d9c2f.png_200x200q80.png_.avif",
-  },
-  {
-    id: 3,
-    title: "AirPods Pro Wireless Earbuds",
-    price: "Rs. 547",
-    discount: "-64%",
-    reviews: 1938,
-    image: "	https://img.drz.lazcdn.com/g/kf/Se0c00a54fa99417ebae06b0cf5298122F.jpg_200x200q80.jpg_.avif",
-  },
-  {
-    id: 4,
-    title: "Beanie Cap with Neck Warmer",
-    price: "Rs. 355",
-    discount: "-64%",
-    reviews: 657,
-    image: "	https://img.drz.lazcdn.com/g/kf/Scf7db64714a14a8e90c115d79023618dM.jpg_200x200q80.jpg_.avif",
-  },
-  {
-    id: 5,
-    title: "Cat Neck Rainbow Ribbon Collar",
-    price: "Rs. 239",
-    discount: "-68%",
-    reviews: 66,
-    image: "	https://img.drz.lazcdn.com/static/pk/p/4a2dffa4a9285b9a9755759ec6561a0b.jpg_200x200q80.jpg_.avif",
-  },
-  {
-    id: 6,
-    title: "INZ Premium Panel Style Zipper",
-    price: "Rs. 979",
-    discount: "-67%",
-    reviews: 686,
-    image: "	https://img.drz.lazcdn.com/static/pk/p/59144b7725e8cb7ddc936a8eabb5fb3a.jpg_200x200q80.jpg_.avif",
-  },
-    {
-    id: 1,
-    title: "KIDS WINTER TRACKSUIT(HOODIE",
-    price: "Rs.512",
-    discount: "-53%",
-    reviews: 17,
-    image: "	https://img.drz.lazcdn.com/g/kf/S92406a40984c440d89d934de4d435ce0e.jpg_200x200q80.jpg_.avif",
-  },
-  {
-    id: 2,
-    title: "Umrah Saving Box - Wooden Islamic Money",
-    price: "Rs. 548",
-    discount: "-73%",
-    reviews: 869,
-    image: "https://img.drz.lazcdn.com/static/pk/p/10fd23683ef5a28a6002534e302f5d69.jpg_200x200q80.jpg_.avif",
-  },
-  {
-    id: 3,
-    title: "WANTER 13 Pcs Makeup Brushes Set Soft hair",
-    price: "Rs. 547",
-    discount: "-64%",
-    reviews: 1938,
-    image: "	https://img.drz.lazcdn.com/static/pk/p/89bbc6e33a5e4211a3a26c45e8c26b61.jpg_200x200q80.jpg_.avif",
-  },
-  {
-    id: 4,
-    title: "Slippers for men House slipper for man Slippers",
-    price: "Rs. 355",
-    discount: "-64%",
-    reviews: 657,
-    image: "	https://img.drz.lazcdn.com/static/pk/p/ccd1cdcc546df7e40212ef05919fd2ef.jpg_200x200q80.jpg_.avif",
-  },
-  {
-    id: 5,
-    title: "6/9/12 Pcs/Set Matte Color Lipstick Pencils",
-    price: "Rs. 239",
-    discount: "-68%",
-    reviews: 66,
-    image: "		https://img.drz.lazcdn.com/static/pk/p/12def14528b8401ff954fa337ef1afbb.jpg_200x200q80.jpg_.avif",
-  },
-  {
-    id: 6,
-    title: "Original Sports Wireless Magnetic Handfree",
-    price: "Rs. 979",
-    discount: "-67%",
-    reviews: 686,
-    image: "	https://img.drz.lazcdn.com/static/pk/p/a4b68f65caada3592df60d4e0e1420ce.jpg_200x200q80.jpg_.avif",
-  },
-    {
-    id: 1,
-    title: "Moeen Collection Handbag for girls - Bags",
-    price: "Rs. 2,600",
-    discount: "-53%",
-    reviews: 17,
-    image: "	https://img.drz.lazcdn.com/static/pk/p/e38aecd94836a3b543ebf7df9971a76b.jpg_200x200q80.jpg_.avif",
-  },
-  {
-    id: 2,
-    title: "grey Jacket for men & women",
-    price: "Rs. 548",
-    discount: "-73%",
-    reviews: 869,
-    image: "	https://img.drz.lazcdn.com/static/pk/p/f070543c2f434ed1bdb5014afc707c21.jpg_200x200q80.jpg_.avif",
-  },
-  {
-    id: 3,
-    title: "High Quality Metal Snap Buttons Press Plier_9.5mm",
-    price: "Rs. 547",
-    discount: "-64%",
-    reviews: 1938,
-    image: "		https://img.drz.lazcdn.com/g/kf/Sd4a42d0acab4426d92809bd895da57baN.jpg_200x200q80.jpg_.avif",
-  },
-  {
-    id: 4,
-    title: "Xiaomi Redmi 20000mAh Portable Power Bank",
-    price: "Rs. 355",
-    discount: "-64%",
-    reviews: 657,
-    image: "	https://img.drz.lazcdn.com/static/pk/p/3a9851f4451614f734b73f788725938f.jpg_200x200q80.jpg_.avif",
-  },
-  {
-    id: 5,
-    title: "Cat Neck Rainbow Ribbon Collar",
-    price: "Rs. 239",
-    discount: "-68%",
-    reviews: 66,
-    image: "	https://img.drz.lazcdn.com/static/pk/p/51a53b6289e842c0b8be0b4b27c415de.jpg_200x200q80.jpg_.avif",
-  },
-  {
-    id: 6,
-    title: "INZ Premium Panel Style Zipper",
-    price: "Rs. 979",
-    discount: "-67%",
-    reviews: 686,
-    image: "	https://img.drz.lazcdn.com/static/pk/p/b1e47ba3cb4fd66d84dc7a01ffd3d5dd.jpg_200x200q80.jpg_.avif",
-  },
+import React, { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 
-];
+const JustForYou = () => {
+  const navigate = useNavigate();
 
- function JustForYou() {
+  const [products, setProducts] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [cart, setCart] = useState([]);
+
+  // Fetch products
+  useEffect(() => {
+    fetch("https://fakestoreapi.com/products")
+      .then(res => res.json())
+      .then(data => {
+        setProducts(data);
+        setLoading(false);
+      })
+      .catch(() => setLoading(false));
+  }, []);
+
+  // Add to cart
+  const addToCart = (product) => {
+    setCart(prev => {
+      const existing = prev.find(item => item.id === product.id);
+      if (existing) {
+        return prev.map(item =>
+          item.id === product.id
+            ? { ...item, quantity: item.quantity + 1 }
+            : item
+        );
+      }
+      return [
+        ...prev,
+        {
+          ...product,
+          quantity: 1,
+          discountedPrice: product.price * 0.7
+        }
+      ];
+    });
+  };
+
+  // Loading Skeleton
+  if (loading) {
+    return (
+      <div className="max-w-7xl mx-auto px-4 py-6">
+        <h2 className="text-lg font-semibold mb-4">Just For You</h2>
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
+          {[...Array(12)].map((_, i) => (
+            <div key={i} className="bg-white p-4 animate-pulse">
+              <div className="h-32 bg-gray-200 mb-3"></div>
+              <div className="h-4 bg-gray-200 mb-2"></div>
+              <div className="h-4 bg-gray-200 w-1/2"></div>
+            </div>
+          ))}
+        </div>
+      </div>
+    );
+  }
+
   return (
-    <div className="max-w-7xl mx-auto px-3 sm:px-4 py-6 mt-5">
-      <h2 className="text-base sm:text-lg font-semibold mb-4">
-        Just For You
-      </h2>
+    <div className="max-w-7xl mx-auto px-4 py-6 mt-5">
+      <div className="flex justify-between items-center mb-4">
+        <h2 className="text-lg font-semibold">Just For You</h2>
 
-      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-3 sm:gap-4">
-        {products.map((item, index) => (
+        {cart.length > 0 && (
+          <div className="text-sm font-semibold">
+            Cart Items: {cart.reduce((t, i) => t + i.quantity, 0)}
+          </div>
+        )}
+      </div>
+
+      {/* PRODUCT GRID */}
+      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
+        {products.map(item => (
           <div
-            key={index}
-            className="bg-white rounded-md  hover:shadow-md transition duration-300 "
+            key={item.id}
+            onClick={() => navigate(`/product/${item.id}`)}
+            className="bg-white rounded-md hover:shadow-lg transition cursor-pointer"
           >
-
+            {/* IMAGE */}
             <div className="w-full aspect-square overflow-hidden">
               <img
                 src={item.image}
                 alt={item.title}
-                className="w-full h-full object-cover"
+                className="w-full h-full object-contain p-4"
               />
             </div>
 
-      
-            <div className="p-2 sm:p-3">
-              <p className="text-xs sm:text-sm text-gray-800 line-clamp-2">
+            {/* CONTENT */}
+            <div className="p-3">
+              <p className="text-sm text-gray-800 line-clamp-2 h-10">
                 {item.title}
               </p>
 
-              <div className="flex items-center text-[10px] sm:text-xs text-yellow-500 mt-1">
-                ★★★★☆
+              {/* RATING */}
+              <div className="text-yellow-500 text-xs mt-1">
+                {"★".repeat(Math.round(item.rating?.rate || 4))}
                 <span className="text-gray-500 ml-1">
-                  ({item.reviews})
+                  ({item.rating?.count || 0})
                 </span>
               </div>
 
-              <div className="flex flex-wrap items-center gap-1 sm:gap-2 mt-2">
-                <span className="text-orange-600 text-sm sm:text-base font-semibold">
-                  {item.price}
+              {/* PRICE */}
+              <div className="flex items-center gap-2 mt-2">
+                <span className="text-orange-600 font-semibold">
+                  Rs. {(item.price * 0.7).toFixed(2)}
                 </span>
-                <span className="text-[10px] sm:text-xs text-gray-500">
-                  {item.discount}
+                <span className="text-xs text-gray-500 line-through">
+                  Rs. {item.price}
+                </span>
+                <span className="text-xs bg-orange-100 text-orange-600 px-1 rounded">
+                  -30%
                 </span>
               </div>
+
+              {/* ADD TO CART */}
+              <button
+                onClick={(e) => {
+                  e.stopPropagation(); // ⛔ card click block
+                  addToCart(item);
+                }}
+                className="w-full mt-3 bg-[#F85606] text-white py-2 rounded text-sm hover:bg-[#E84B00]"
+              >
+                Add to Cart
+              </button>
             </div>
           </div>
         ))}
       </div>
     </div>
   );
-}
-export default JustForYou
+};
+
+export default JustForYou;
